@@ -1,0 +1,11 @@
+Flask == 0.11.1
+gevent
+gunicorn
+keras
+numpy
+h5py
+pillow
+Image
+flask_sqlalchemy
+flask_migrate
+flask_wtf
