@@ -184,10 +184,12 @@ poll_data = {
 polltxt = 'data.txt'
 
 @app.route('/question')
+@login_required
 def question():
     return render_template('poll.html', data=poll_data)
 
 @app.route('/poll')
+@login_required
 def poll():
     vote = request.args.get('field')
 
