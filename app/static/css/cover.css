@@ -110,7 +110,7 @@ figcaption {
 .slides {
     padding: 0;
     width: 50%;
-    height: 20%;
+    height: 35%;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -132,8 +132,8 @@ figcaption {
 .slide {
     top: 0;
     opacity: 0;
-    width: 609px;
-    height: 420px;
+    width: 50%;
+    height: 35%;
     display: block;
     position: absolute;
 
