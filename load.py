@@ -12,7 +12,7 @@ def init():
 	loaded_model = model_from_json(loaded_model_json)
 	#load weights into new model
 	loaded_model.load_weights("model/model.h5")
-	print("Loaded Model from disk")
+	#print("Loaded Model from disk")
 
 	#compile and evaluate loaded model
 	loaded_model.compile(loss='categorical_crossentropy',optimizer='rmsprop',metrics=['accuracy'])
