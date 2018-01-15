@@ -203,6 +203,7 @@ input:checked + .slide-container .nav label { display: block; }
 	border-radius: 100%;
 	display: inline-block;
 	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
 }
 
 .nav-dots .nav-dot:hover {
