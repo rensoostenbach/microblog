@@ -149,11 +149,11 @@ figcaption {
 
 .nav label {
     width: 100px;
-    height: 100%;
+    height: 50%;
     display: none;
     position: absolute;
 
-	  opacity: 0;
+	  opacity: 0.1;
     z-index: 9;
     cursor: pointer;
 
