@@ -107,7 +107,7 @@ def result():
 @app.route('/contact/')
 def contact():
     return render_template('contact.html')
-	
+
 @app.route('/portfolio/')
 def portfolio():
     return render_template('portfolio.html')
@@ -176,6 +176,40 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile',
                            form=form)
+
+poll_data = {
+   'question' : 'Which animal do you prefer?',
+   'fields'   : ['Cat', 'Dog', 'Other']
+}
+polltxt = 'data.txt'
+
+@app.route('/question')
+def question():
+    return render_template('poll.html', data=poll_data)
+
+@app.route('/poll')
+def poll():
+    vote = request.args.get('field')
+
+    out = open(polltxt, 'a')
+    out.write( vote + '\n' )
+    out.close()
+
+    return render_template('thankyou.html', data=poll_data)
+
+@app.route('/pollresults')
+def show_results():
+    votes = {}
+    for f in poll_data['fields']:
+        votes[f] = 0
+
+    f  = open(polltxt, 'r')
+    for line in f:
+        vote = line.rstrip("\n")
+        votes[vote] += 1
+
+    return render_template('pollresults.html', data=poll_data, votes=votes)
+
 
 @app.before_request
 def before_request():

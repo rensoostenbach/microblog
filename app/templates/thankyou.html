@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Thank you for submitting your vote for<br>
+{{ data.question }}<br></h2>
+<a href="{{ url_for('show_results') }}">Look at the results</a>
+{% endblock %}
