@@ -2,8 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
-#from config import Config
-import config
+from config import Config
+
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from flask_login import LoginManager, UserMixin, \
                                 login_required, login_user, logout_user
@@ -26,8 +26,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'tiff'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 login_manager = LoginManager()
-#app.config.from_object(Config)
-app.config.from_object(app.config)
+app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)

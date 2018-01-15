@@ -184,7 +184,8 @@ def before_request():
         db.session.commit()
 
 if __name__ == '__main__':
-	port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0', port=port)
+    app.run()
+	#port = int(os.environ.get('PORT', 5000))
+	#app.run(host='0.0.0.0', port=port)
 	#optional if we want to run in debugging mode
 	#app.run(debug=True)
