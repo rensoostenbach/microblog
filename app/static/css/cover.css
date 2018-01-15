@@ -109,8 +109,8 @@ figcaption {
 
 .slides {
     padding: 0;
-    width: 435px;
-    height: 300px;
+    width: 480px;
+    height: 331px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -132,8 +132,8 @@ figcaption {
 .slide {
     top: 0;
     opacity: 0;
-    width: 435px;
-    height: 300px;
+    width: 480px;
+    height: 331px;
     display: block;
     position: absolute;
 
@@ -191,6 +191,7 @@ input:checked + .slide-container .nav label { display: block; }
 	display: block;
 	position: absolute;
 	text-align: center;
+	color: white;
 }
 
 .nav-dots .nav-dot {
