@@ -109,8 +109,8 @@ figcaption {
 
 .slides {
     padding: 0;
-    width: 609px;
-    height: 420px;
+    width: 509px;
+    height: 351px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -132,8 +132,8 @@ figcaption {
 .slide {
     top: 0;
     opacity: 0;
-    width: 609px;
-    height: 420px;
+    width: 509px;
+    height: 351px;
     display: block;
     position: absolute;
 
@@ -143,8 +143,8 @@ figcaption {
 }
 
 .slide img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .nav label {
